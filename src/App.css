@@ -89,7 +89,7 @@ header {
   gap: 24px;
 }
 
-.logo {
+/* .logo {
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
   font-size: 1.75rem;
@@ -101,7 +101,7 @@ header {
 
 .logo span {
   color: #b7844f;
-}
+} */
 
 .nav-links {
   list-style: none;
@@ -202,13 +202,13 @@ section {
 
 .hero {
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   position: relative;
-  background: url("/assets/home.jpeg") no-repeat center center;
+  /* background: url("/assets/home.jpeg") no-repeat center center; */
   background-size: cover;
   overflow: hidden;
-  cursor: pointer;
 }
 
 .hero::before,
@@ -244,11 +244,11 @@ section {
 }
 
 .hero-line-1 {
-  font-size: clamp(2.65rem, 5.2vw, 4.9rem);
+  font-size: clamp(2.2rem, 8vw, 4.9rem);
 }
 
 .hero-line-2 {
-  font-size: clamp(2.55rem, 5vw, 4.8rem);
+  font-size: clamp(2.1rem, 7.5vw, 4.8rem);
 }
 
 .hero-subheadline {
@@ -265,7 +265,8 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 18px;
+  gap: 16px;
+  margin-top: 10px;
 }
 
 .section-shell {
@@ -814,12 +815,15 @@ footer {
   }
   .hero-buttons {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    gap: 14px;
+    width: 100%;
+    max-width: 320px;
+    margin: 30px auto 0;
   }
   .btn-primary,
   .btn-outline-gold {
     width: 100%;
-    max-width: 300px;
   }
 }
 
@@ -835,8 +839,8 @@ footer {
     grid-template-columns: 1fr;
   }
   .hero {
-    min-height: 85vh;
-    padding: 0;
+    min-height: auto;
+    padding: 120px 0 80px;
   }
   .footer-shell {
     padding: 42px 22px 24px;

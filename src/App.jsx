@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header';
-import Hero from './components/Hero';
+import HeroSection from './components/HeroSection';
 import About from './components/About';
 import Products from './components/Products';
 import WhyUs from './components/WhyUs';
@@ -15,7 +15,7 @@ function App() {
     <div className="app-container">
       <Header />
       <main>
-        <Hero />
+        <HeroSection />
         <About />
         <Products />
         <WhyUs />

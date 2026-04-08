@@ -16,9 +16,9 @@ const Header = () => {
       <div className="container nav-wrapper">
         <div className="logo">
           <img
-            src="YOUR-LOGO-IMAGE-URL-HERE"
+            src="/assets/logo.png"
             alt="AgriX Global"
-            style={{ height: '55px', width: 'auto', objectFit: 'contain' }}
+            style={{ height: '100px', width: 'auto' }}
           />
         </div>
 
