@@ -9,25 +9,30 @@ const Certifications = () => {
   ];
 
   return (
-    <section id="certified">
+    <section id="certified" style={{ backgroundColor: 'var(--color-white)', padding: '80px 0' }}>
       <div className="container">
-        <div className="section-shell paper">
-          <h2 className="section-title center" style={{ color: 'var(--deep)' }}>
-            Certified for Global Trade
-          </h2>
+        <h2 style={{ textAlign: 'center', fontSize: '2.5rem', color: 'var(--color-emerald-dark)', marginBottom: '16px', fontFamily: '"Playfair Display", serif' }}>
+          Certified for Global Trade
+        </h2>
+        <p style={{ textAlign: 'center', color: 'var(--color-gray)', fontSize: '1.1rem', marginBottom: '48px' }}>
+          Internationally recognized certifications that guarantee trust and safety
+        </p>
 
-          <p className="section-sub center" style={{ color: '#5d6c66' }}>
-            Internationally recognized certifications that guarantee trust and safety
-          </p>
-
-          <div className="cert-grid-cards">
-            {certifications.map((cert, index) => (
-              <div key={index} className="cert-card">
-                <i className={cert.icon}></i>
-                <p>{cert.name}</p>
-              </div>
-            ))}
-          </div>
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '24px' }}>
+          {certifications.map((cert, index) => (
+            <div key={index} style={{
+              backgroundColor: 'var(--color-offwhite)',
+              padding: '32px',
+              borderRadius: '24px',
+              border: '1px solid var(--color-mint)',
+              textAlign: 'center',
+              width: '200px',
+              boxShadow: 'var(--shadow-soft)'
+            }}>
+              <i className={cert.icon} style={{ fontSize: '2.5rem', color: 'var(--color-emerald)', marginBottom: '16px' }}></i>
+              <p style={{ fontWeight: 'bold', color: 'var(--color-charcoal)' }}>{cert.name}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

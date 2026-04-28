@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,14 +13,16 @@ const Header = () => {
   };
 
   return (
-    <header>
+    <header style={{ backgroundColor: 'var(--color-white)' }}>
       <div className="container nav-wrapper">
         <div className="logo">
-          <img
-            src="/assets/logo.png"
-            alt="AgriX Global"
-            style={{ height: '100px', width: 'auto' }}
-          />
+          <Link to="/" onClick={closeMenu}>
+            <img
+              src="/assets/logo.png"
+              alt="AgriX Global"
+              style={{ height: '80px', width: 'auto' }}
+            />
+          </Link>
         </div>
 
         <button
@@ -32,15 +35,13 @@ const Header = () => {
         </button>
 
         <ul className={`nav-links ${isMenuOpen ? 'show' : ''}`} id="navLinks">
-          <li><a href="#home" onClick={closeMenu}>Home</a></li>
-          <li><a href="#about" onClick={closeMenu}>About</a></li>
-          <li><a href="#certified" onClick={closeMenu}>Certifications</a></li>
-          <li><a href="#why" onClick={closeMenu}>Why Us</a></li>
-          <li><a href="#products" onClick={closeMenu}>Products</a></li>
-          <li><a href="#process" onClick={closeMenu}>Process</a></li>
+          <li><Link to="/" onClick={closeMenu}>Home</Link></li>
+          <li><Link to="/about" onClick={closeMenu}>About Us</Link></li>
+          <li><Link to="/products" onClick={closeMenu}>Products</Link></li>
+          <li><Link to="/global-markets" onClick={closeMenu}>Global Markets</Link></li>
         </ul>
 
-        <a href="#contact" className="btn-quote" onClick={closeMenu}>Get Quote →</a>
+        <Link to="/contact" className="btn-hero-primary" onClick={closeMenu} style={{ padding: '10px 24px', fontSize: '1rem' }}>Contact Us</Link>
       </div>
     </header>
   );

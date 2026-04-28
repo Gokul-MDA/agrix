@@ -1,23 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+
 :root {
-  --bg: #e3e5d7;
-  --paper: #efe7d8;
-  --sage: #6b8d79;
-  --leaf: #2e6f5e;
-  --leaf-2: #3c8a74;
-  --deep: #0f4d44;
-  --deep-2: #0a3d36;
-  --brown: #754a34;
-  --brown-2: #9b6445;
-  --gold: #dfbf83;
-  --gold-2: #f2d4a5;
-  --cream: #f5efe3;
-  --text: #f7f4ed;
-  --body: #22312e;
-  --muted: #5a6964;
-  --shadow: 0 24px 45px rgba(20, 32, 28, 0.16);
-  --shadow-soft: 0 14px 28px rgba(20, 32, 28, 0.12);
-  --radius: 34px;
-  --radius-lg: 42px;
+  --color-white: #ffffff;
+  --color-offwhite: #f9fafb;
+  --color-emerald: #16a34a;
+  --color-emerald-dark: #15803d;
+  --color-forest: #064e3b;
+  --color-forest-dark: #022c22;
+  --color-mint: #dcfce7;
+  --color-charcoal: #1f2937;
+  --color-gray: #4b5563;
+  --color-lightgray: #e5e7eb;
+  
+  --bg: var(--color-white);
+  --paper: var(--color-white);
+  --sage: var(--color-mint);
+  --leaf: var(--color-emerald);
+  --leaf-2: var(--color-emerald-dark);
+  --deep: var(--color-emerald-dark);
+  --deep-2: #14532d;
+  --brown: #78350f;
+  --brown-2: #92400e;
+  --gold: #fbbf24;
+  --gold-2: #f59e0b;
+  --cream: var(--color-offwhite);
+  --text: var(--color-charcoal);
+  --body: var(--color-charcoal);
+  --muted: var(--color-gray);
+  
+  --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-soft: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+  --radius: 24px;
+  --radius-lg: 32px;
 }
 
 * {
@@ -32,39 +46,10 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
-  background: radial-gradient(
-      circle at 20% 10%,
-      rgba(126, 171, 145, 0.18),
-      transparent 25%
-    ),
-    radial-gradient(
-      circle at 80% 20%,
-      rgba(92, 132, 97, 0.18),
-      transparent 24%
-    ),
-    linear-gradient(180deg, #dde0d0 0%, #d7dacb 100%);
+  background-color: var(--color-offwhite);
   color: var(--body);
   overflow-x: hidden;
   line-height: 1.55;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.22;
-  background: radial-gradient(
-      900px 420px at -10% 30%,
-      rgba(30, 101, 77, 0.22),
-      transparent 70%
-    ),
-    radial-gradient(
-      680px 360px at 110% 60%,
-      rgba(117, 74, 52, 0.18),
-      transparent 70%
-    );
-  z-index: -1;
 }
 
 .container {

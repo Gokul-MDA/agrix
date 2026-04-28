@@ -1,27 +1,28 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import About from './components/About';
-import Products from './components/Products';
-import WhyUs from './components/WhyUs';
-import Certifications from './components/Certifications';
-import Process from './components/Process';
-import Quality from './components/Quality';
 import Footer from './components/Footer';
+
+// Pages
+import Home from './pages/Home';
+import AboutPage from './pages/AboutPage';
+import ProductsPage from './pages/ProductsPage';
+import GlobalMarkets from './pages/GlobalMarkets';
+import ContactPage from './pages/ContactPage';
 
 function App() {
   return (
     <div className="app-container">
       <Header />
       <main>
-        <HeroSection />
-        <About />
-        <Products />
-        <WhyUs />
-        <Certifications />
-        <Process />
-        <Quality />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/global-markets" element={<GlobalMarkets />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
       </main>
       <Footer />
     </div>

@@ -30,35 +30,49 @@ const Quality = () => {
   ];
 
   return (
-    <section id="quality">
+    <section id="quality" style={{ backgroundColor: 'var(--color-mint)', padding: '80px 0' }}>
       <div className="container">
-        <div className="section-shell earth">
-          <h2 className="section-title center">We Ensure</h2>
+        <div style={{ maxWidth: '900px', margin: '0 auto', backgroundColor: 'var(--color-white)', borderRadius: '32px', padding: '48px', boxShadow: 'var(--shadow)' }}>
+          <h2 style={{ textAlign: 'center', fontSize: '2.5rem', color: 'var(--color-emerald-dark)', marginBottom: '32px', fontFamily: '"Playfair Display", serif' }}>
+            We Ensure
+          </h2>
 
-          <div className="ensure-wrapper">
-            <ul className="ensure-list">
-              {ensureItems.map((item, index) => (
-                <li key={index}>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            {ensureItems.map((item, index) => (
+              <li key={index} style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '20px',
+                padding: '20px',
+                backgroundColor: 'var(--color-offwhite)',
+                borderRadius: '16px',
+                border: '1px solid var(--color-lightgray)'
+              }}>
+                <div style={{
+                  width: '56px',
+                  height: '56px',
+                  borderRadius: '50%',
+                  backgroundColor: 'var(--color-mint)',
+                  color: 'var(--color-emerald)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '1.5rem',
+                  flexShrink: 0
+                }}>
                   <i className={item.icon}></i>
-                  <span>
-                    <span className="gold-text">{item.title}</span> – {item.description}
-                  </span>
-                </li>
-              ))}
-            </ul>
+                </div>
+                <div>
+                  <span style={{ fontWeight: 'bold', color: 'var(--color-charcoal)', fontSize: '1.1rem' }}>{item.title}</span> 
+                  <span style={{ color: 'var(--color-gray)', marginLeft: '8px' }}>– {item.description}</span>
+                </div>
+              </li>
+            ))}
+          </ul>
 
-            <p
-              style={{
-                marginTop: '24px',
-                textAlign: 'center',
-                fontSize: '1.08rem',
-                fontWeight: 600,
-              }}
-            >
-              Quality Assurance is our{' '}
-              <span className="gold-text">Highest Priority</span> — every batch is 100% export-ready.
-            </p>
-          </div>
+          <p style={{ marginTop: '32px', textAlign: 'center', fontSize: '1.2rem', color: 'var(--color-charcoal)' }}>
+            Quality Assurance is our <span style={{ fontWeight: 'bold', color: 'var(--color-emerald)' }}>Highest Priority</span> — every batch is 100% export-ready.
+          </p>
         </div>
       </div>
     </section>
